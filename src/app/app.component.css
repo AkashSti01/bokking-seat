@@ -1,3 +1,15 @@
-p {
-  font-family: Lato;
+.available {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.booked {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
 }
