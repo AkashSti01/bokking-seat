@@ -8,19 +8,20 @@
       <ng-container *ngIf="i !== 9; else lastRow">
         <td *ngFor="let seat of row; let j = index">
           <span [ngClass]="seat === 'O' ? 'available' : 'booked'"
-            >{{ i + 1 }}{{ j + 1 }}</span
+            >{{ i }}{{ j }}</span
           >
         </td>
       </ng-container>
       <ng-template #lastRow>
         <td *ngFor="let seat of row; let j = index">
           <span [ngClass]="seat === 'O' ? 'available' : 'booked'"
-            >{{ i + 2 }}{{ j + 1 }}</span >
+            >{{ i }}{{ j }}</span
+          >
         </td>
       </ng-template>
     </tr>
   </table>
   <p *ngIf="bookedSeats.length > 0">
-  Booked seats: {{ fixing(bookedSeats) }}
-</p>
+    Booked seats: {{ showBookedTickets(bookedSeats) }}
+  </p>
 </div>

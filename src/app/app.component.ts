@@ -13,7 +13,7 @@ export class AppComponent {
   bookedSeats: any[] = [];
 
   display() {
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < 12; i++) {
       console.log(this.coach[i].join(' '));
     }
     console.log();
@@ -52,7 +52,7 @@ export class AppComponent {
   }
 
 
-  fixing(bookedSeats){
+  showBookedTickets(bookedSeats){
     return bookedSeats.map((seat) =>{ return seat.join(''); }).join(', ')
   }
 }
